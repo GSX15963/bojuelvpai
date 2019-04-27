@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 练习1：写一个函数，实现对数字数组的排序。
+        // var num = [20,12,50,48,98,70,52,46,66,42,33,56,68,100]
+        // function px (sj) {
+        //     for(t = 1; t <= sj.length-1;t++) {
+        //         for(c = 1; c <= sj.length - t; c++) {
+        //             if(sj[c-1] > sj[c]) {
+        //                 var temp = sj[c-1];
+        //                 sj[c-1] = sj[c];
+        //                 sj[c] = temp;
+        //             }
+        //         }
+        //     }
+        //     return sj;
+        // }
+        // var js = px(num);
+        // document.write(js);
+
+        // 练习2：写一个函数，求任意两个不同数字的最大值，并能返回运算后的结果.
+        // function bj(a,b) {
+        //      return a > b?a:b;
+        // }
+        // var js = bj(21,98);
+        // document.write(js);
+        // 练习3：写一个函数，求任意三个不同数字的最大值，并能返回运算后的结果.
+        // function bj(a,b,c) {
+        //      return a > b?(a>c?a:c):(b>c?b:c);
+        // }
+        // var js = bj(21,98,13);
+        // document.write(js); 
+        // 练习4：写一个函数，实现任意数的阶乘，并返回值。（如：3的阶乘， 1x2x3）【作业】 jC(5);
+        // 1、先创建一个函数
+        // function bj(a) {
+        //     // 2、创建一个变量，存放运算结果
+        //     var b = 1;
+        //     // 3、循环遍历，实现从1到本身相乘
+        //     for(var i = 1; i <= a; i++) {
+        //        b = b * i;
+        //     }
+        //     // 4、返回结果
+        //      return b;
+        // }
+        // var js = bj(6);
+        // document.write(js);
+
+        // 练习5：写一个函数，判断一个数是否是素数，并返回结果true 或 false(又叫质数，只能被1和自身整数的数)
+            // function zs (a) {
+            //     var c = 0;
+            //     for(b = 1; b <= a; b++) {
+            //         if(a % b == 0) {
+            //             c = c + 1;
+            //             continue;
+            //         } 
+            //     }
+            //     if(c == 2) {
+            //             return true;
+            //         }else {
+            //             return false;
+            //         }
+            // }
+            // var d = zs(363);
+            // alert(d);
+
+        // 练习6：写一个函数，计算任意两个数字的任意算术运算（简单的计算器小功能），并能返回运算后的结果。
+            // var a = Number(prompt('请输入数字') );
+            // var c = prompt('请输入符号');
+            // var b = Number(prompt('请输入数字') );
+            // function jsq (a,c,b) {
+            //     switch(a,b,c) {
+            //         case '+':
+            //         d = a + b;
+            //         break;
+            //         case '-':
+            //         d = a - b;
+            //         break;
+            //         case '*':
+            //         d = a * b;
+            //         break;
+            //         case '/':
+            //         d = a / b;
+            //         break;
+            //         case '%':
+            //         d = a % b;
+            //         break;
+            //     }
+            //     return d;
+            // }
+            // var d = jsq(a,c,b);
+            // alert(d);
+        // 【函数进阶】练习7：写一个函数，计算任意个数字中的最大值和最小值
+        // getMax(11,33,22,44,66,55);
+        // getMin(11,33,22,44,66,55);
+
+                // 【最大值】
+            // function getMax (){ 
+            //     // 直接在函数体里用arguments[索引]或arguments.length
+            //     var b = arguments[0];
+            //     for(a = 1; a < arguments.length; a++) {
+            //         if(arguments[a] > b) {
+            //             b = arguments[a];
+            //         }
+            //     }
+            //     return b;
+            // }
+            // var c = getMax(11,33,22,44,66,55,12,15,54,77,72,78,80,85,88,2,5,6,8,90,18,19,25);
+            // alert('最大值是:' + c);
+
+                // 【最小值】
+            // 1.首先创建函数
+            // function getMin () {
+            //     // 2.创建一个变量，假设伪数组（arguments）里第一个数字是最小值
+            //     var a = arguments[0];
+            //     // 3.循环遍历，对伪数组里的数字（用户传入的多个数字）挨个进行比较大小
+            //     for(i = 1; i < arguments.length; i++) {
+            //         // 4.判断伪数组中的最小值
+            //         if(arguments[i] < a) {
+            //             // 将最小值赋值给变量a
+            //             a = arguments[i];
+            //         }
+            //     }
+            //     // 5.返回最后结果
+            //     return a;
+            // }
+            // // 调用函数，并且创建变量来接受返回结果
+            // var b = getMin(11,33,22,44,66,55,12,15,54,77,72,78,80,85,88,90,18,19,25);
+            // alert(b);
+
+            // 【函数进阶-练习】
+        // 1. 下列代码的运行结果？原因是什么？
+        // console.log(a + 2); //？ NaN;
+        // var a = 2;
+        // console.log(a + 2); //？ 4
+        // 原因： 因为代码在执行前进行了预解析，把用var关键字创建的变量，（仅变量名）提升到了本作用域的顶部
+
+        // 2. 下列代码的运行结果？原因是什么？
+        // fn(); 　 //?　　 报错
+        // var fn = function(){
+        // alert(1);
+        // }
+        // 原因：因为预解析时，仅把用var关键字创建的变量，变量名提升到顶部。
+
+        // 3. 下列代码的运行结果？原因是什么？
+        // fn(); //? 正常执行
+        // function fn(){
+        // alert(2);
+        // }
+        // 原因：因为预解析时，把用函数声明创建的函数，整体提升到本作用域的顶部。
+
+        // 4. 下列代码的运行结果？原因是什么？
+        // var a = 1;
+        // var b = 2;
+        // function fn(a,b) {
+        // console.log(a + b); // NaN
+        // }
+        // fn(); 
+        // 原因：形参也是变量，var a; var b; 两个都是undefined，所以加起来是NaN。
+
+        // 5. 下列代码的运行结果？原因是什么？【作业】
+        // var a = 123;
+        // function test() {
+        // console.log( a + 2); //  NaN
+        // var a = 2;
+        // console.log( a + 2); //  4
+        // }
+        // test();
+        // 原因：当局部作用域和全局作用域的变量命名一样时，优先使用局部变量，并且预解析时，会把用var关键字创建的变量，变量名提升到当前作用域顶部
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
